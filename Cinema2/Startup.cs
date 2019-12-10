@@ -29,12 +29,6 @@ namespace Cinema2
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
-            // получаем строку подключения из файла конфигурации
-            string connection = Configuration.GetConnectionString("PlaceConnection");
-            // добавляем контекст MobileContext в качестве сервиса в приложение
-            services.AddDbContext<KinoContext>(options =>
-                options.UseSqlServer(connection));
-
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();

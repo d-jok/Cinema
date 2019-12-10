@@ -16,32 +16,6 @@ namespace Cinema2.Controllers
             return View();
         }
 
-        private KinoContext db;
-
-        public HomeController(KinoContext context)
-        {
-            db = context;
-        }
-
-        public async Task<IActionResult> Place()
-        {
-            return View(await db.Place.ToListAsync());
-        }
-
-        public IActionResult CreatePlace()
-        {
-            return View();
-        }
-        [HttpPost]
-        public async Task<IActionResult> CreatePlace(BuyTicket obj)
-        {
-            db.Entry(obj).State = EntityState.Added;
-            db.SaveChanges();
-
-            return RedirectToAction("Index");
-        }
-
-
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";

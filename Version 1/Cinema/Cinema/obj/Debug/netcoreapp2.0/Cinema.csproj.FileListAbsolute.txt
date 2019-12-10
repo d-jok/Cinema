@@ -1,0 +1,11 @@
+D:\Програмы\Project C#\Cinema\Cinema\bin\Debug\netcoreapp2.0\Cinema.deps.json
+D:\Програмы\Project C#\Cinema\Cinema\bin\Debug\netcoreapp2.0\Cinema.runtimeconfig.json
+D:\Програмы\Project C#\Cinema\Cinema\bin\Debug\netcoreapp2.0\Cinema.runtimeconfig.dev.json
+D:\Програмы\Project C#\Cinema\Cinema\bin\Debug\netcoreapp2.0\Cinema.dll
+D:\Програмы\Project C#\Cinema\Cinema\bin\Debug\netcoreapp2.0\Cinema.pdb
+D:\Програмы\Project C#\Cinema\Cinema\obj\Debug\netcoreapp2.0\Cinema.csprojAssemblyReference.cache
+D:\Програмы\Project C#\Cinema\Cinema\obj\Debug\netcoreapp2.0\Cinema.csproj.CoreCompileInputs.cache
+D:\Програмы\Project C#\Cinema\Cinema\obj\Debug\netcoreapp2.0\Cinema.AssemblyInfoInputs.cache
+D:\Програмы\Project C#\Cinema\Cinema\obj\Debug\netcoreapp2.0\Cinema.AssemblyInfo.cs
+D:\Програмы\Project C#\Cinema\Cinema\obj\Debug\netcoreapp2.0\Cinema.dll
+D:\Програмы\Project C#\Cinema\Cinema\obj\Debug\netcoreapp2.0\Cinema.pdb
