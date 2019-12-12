@@ -11,10 +11,12 @@
             <li>
                 <a asp-area="" asp-controller="Manage" asp-action="Index" title="Manage">Hello @UserManager.GetUserName(User)!</a>
             </li>
-            <li>
-                <button type="submit" class="nav-item">Log out</button>
+            <li class="nav-item" role="presentation">
+                <button type="submit" class="btn navbar-btn">Log out</button>
             </li>
-            <li class="nav-item" role="presentation"><a class="nav-link" href="#">My Orders</a></li>    <!-- HERE -->
+            <li class="nav-item" role="presentation">
+                <a asp-area="">My Orders</a>
+            </li>    <!-- HERE -->
         </ul>
     </form>
 }
@@ -23,6 +25,6 @@ else
     <ul class="nav navbar-nav navbar-right">
         <li><a asp-area="" asp-controller="Account" asp-action="Register">Register</a></li>
         <li><a asp-area="" asp-controller="Account" asp-action="Login">Log in</a></li>
-        <li><a asp-area="" asp-controller="Home" asp-action="Place">Place</a></li>
+        <li><a asp-area="" asp-controller="Home" asp-action="Tickets">Buy Ticket</a></li>
     </ul>
 }

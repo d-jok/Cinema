@@ -1,0 +1,145 @@
+﻿@model Cinema2.Models.Session
+@{
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <style type="text/css">
+        body {
+            font-family: Arial;
+            font-size: 10pt;
+        }
+    </style>
+</head>
+<body>
+    @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+    {
+        <table>
+            <tr>
+                <td>
+                    Session:
+                </td>
+                <td>
+                    <select id="A" name="A"  onchange="configureDropDownLists(this,document.getElementById('B')">
+                        <option>Please Select</option>
+                        @foreach(var item in Model.Films)
+                        {
+                            <option value="@item.Value">@item.Text</option>
+                        }
+                    </select>
+
+                    
+                </td>
+                <td>
+                    Date:
+                </td>
+                <td>
+                    <select id="B" name="B">
+                        <option>suqa</option>
+                        @foreach (var item in Model.Films)
+                        {
+                            <option value="@item.Value">Baran</option>
+                        }
+                    </select>
+                   
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="Submit" />
+                </td>
+            </tr>
+        </table>
+    }
+    @if (ViewBag.Message != null)
+    {
+        <script type="text/javascript">
+            window.onload = function () {
+                alert("@ViewBag.Message");
+            };
+        </script>
+    }
+
+
+    <div>
+        <select id="ProdId" name="ProdId">
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+        </select>
+
+        <select id="ProdId" name="ProdId">
+            <option value="1">Un</option>
+            <option value="2">Deux</option>
+            <option value="3">Trois</option>
+        </select>
+    </div>
+
+
+    @section scripts{
+        <script>
+            function configureDropDownLists(A,B) {
+                var opt = document.createElement('option');
+                //var films = Model.Films.Where(x=>x.Text == opt.value);
+                //for (var value in films)
+                
+                B.options.length = 0;
+                opt.value = 123;
+                opt.text = 321;
+                B.options.add(opt);
+            }
+            $('select[name="A"]').change(function () {
+                var val = $(this).val();
+                console.log(val);
+                $('select[name="B"]').each(function (index, value) {
+                    $(value).val(val);
+                });
+            });
+            $('select[name="ProdId"]').change(function () {
+                var val = $(this).val();
+                console.log(val);
+                $('select[name="ProdId"]').each(function (index, value) {
+                    $(value).val(val);
+                });
+            });
+        </script>
+    }
+
+
+
+</body>
+</html>
+
+<h3>Зал:</h3>
+
+@{
+    /*List<SelectListItem> HallListItems = new List<SelectListItem>();
+
+    foreach (var item in model)
+    {
+        HallListItems.Add(new SelectListItem
+        {
+            Text = item.MovieName,
+            Value = item.MovieName
+        });
+    }
+
+    HallListItems.Add(new SelectListItem
+    {
+        Text = "Великий",
+        Value = "Big"
+    });
+    HallListItems.Add(new SelectListItem
+    {
+        Text = "Малий",
+        Value = "Small",
+        Selected = true
+    });*/
+}
+

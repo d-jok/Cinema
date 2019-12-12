@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -9,11 +10,12 @@ namespace Cinema2.Models
     public class Session
     {
         [Key]
-        int Id { get; set; }
-        string MovieName { get; set; }
-        DateTime Date { get; set; }
-        DateTime Time { get; set; }
-        string HallName { get; set; }
-        int TicketPrice { get; set; }
+        public int? Id { get; set; }
+        public string MovieName { get; set; }
+        public DateTime Date { get; set; }
+        public DateTime Time { get; set; }
+        public string HallName { get; set; }
+        public int? TicketPrice { get; set; }
+        public List<SelectListItem> Films { get; set; }
     }
 }

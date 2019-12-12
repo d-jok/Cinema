@@ -36,6 +36,14 @@ namespace Cinema2
             // Add application services.
             services.AddTransient<IEmailSender, EmailSender>();
 
+
+            // получаем строку подключения из файла конфигурации
+            string connection = Configuration.GetConnectionString("DefaultConnection");
+            // добавляем контекст MobileContext в качестве сервиса в приложение
+            services.AddDbContext<CinemaContext>(options =>
+                options.UseSqlServer(connection));
+
+
             services.AddMvc();
         }
 
