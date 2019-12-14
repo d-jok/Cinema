@@ -1,0 +1,21 @@
+﻿@page
+@model Cinema.Models.Ticket
+@{
+}
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.Session, "Name")
+    <br />
+    @Html.EditorFor(model => model.Session)
+    <br /><br />
+
+    @Html.LabelFor(model => model.Status, "Surname")
+    <br />
+    @Html.EditorFor(model => model.Status)
+    <br /><br />
+
+     
+
+    <input type="submit" value="Buy" />
+}

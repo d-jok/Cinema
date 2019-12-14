@@ -1,0 +1,23 @@
+﻿@model IEnumerable<Cinema.Models.Session>
+@{
+}
+
+<p>Sessions:</p>
+<table class="table">
+    <tr>
+        <td>ID</td>
+        <td>Movie Name</td>
+        <td>Date</td>
+    </tr>
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>@item.Id</td>
+        <td>@item.MovieName</td>
+        <td>@item.Date</td>
+        <td>
+            <a asp-action="BuyTicket" asp-controller="Home" asp-route-id="@item.Id">Buy</a> |
+        </td>
+    </tr>
+    }
+</table>
