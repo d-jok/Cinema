@@ -1,4 +1,6 @@
-﻿@model Cinema.Views.Home.NewIndexModel
+﻿
+@model Cinema.Views.Home.NewIndexModel
+@using Microsoft.AspNetCore.Http;
 @{
     //ViewData["Title"] = "Home Page";
 }
@@ -36,12 +38,22 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="nav navbar-nav ml-auto">
                         <!-- User Nick name -->
-                        @{ 
-                            if (Model.Username.Length != 0)
+                       
+
+                                @if (Model.Username != null)
+                                {
+                                    <li class="nav-item" role="presentation">
+                                        <p>Model<p>
+                                        <a asp-action="cabinet" class="nav-link">Request.Cookies["UserName"]</a>
+                                    </li>
+                                }
+                            @if (Model.Admin == 1)
                             {
-                                <li class="nav-item" role="presentation"><a asp-action="cabinet" class="nav-link">@Model.Username</a></li>
+                                <li class="nav-item" role="presentation">
+                                    <a asp-action="CreateMovie" class="nav-link">Create Movie</a>
+                                </li>
                             }
-                        }
+                       
                         <li><a asp-action="Index">Logout</a></li>
 
 

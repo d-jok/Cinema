@@ -39,7 +39,6 @@ namespace Cinema
             services.AddDistributedMemoryCache();
             services.AddSession();
 
-            //services.AddSession();
             services.AddMvc();
         }
 

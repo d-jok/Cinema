@@ -1,21 +1,34 @@
 ﻿@page
-@model Cinema.Models.Ticket
+@model Cinema.Models.Session
 @{
 }
 
 @using (Html.BeginForm())
 {
-    @Html.LabelFor(model => model.Session, "Name")
+    @Html.LabelFor(model => model.MovieName, "Movie")
     <br />
-    @Html.EditorFor(model => model.Session)
+    @Html.EditorFor(model => model.MovieName)
     <br /><br />
 
-    @Html.LabelFor(model => model.Status, "Surname")
+    @Html.LabelFor(model => model.Date, "Date")
     <br />
-    @Html.EditorFor(model => model.Status)
+    @Html.EditorFor(model => model.Date)
     <br /><br />
 
-     
+    @Html.Label("Your Name");
+    <br />
+    @Html.Editor("Your Name");
+    <br /><br />
+
+    @Html.Label("Email");
+    <br />
+    @Html.Editor("Email");
+    <br /><br />
+
+    @Html.Label("Place");
+    <br />
+    @Html.Editor("Place");
+    <br /><br />
 
     <input type="submit" value="Buy" />
 }

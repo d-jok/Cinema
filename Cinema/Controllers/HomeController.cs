@@ -57,22 +57,27 @@ namespace Cinema.Controllers
         public async Task<IActionResult> Login(User obj)
         {
             var date = db.User.ToList();
-            /*var cookieOptions = new CookieOptions
+            var cookieOptions = new CookieOptions
             {
                 Expires = DateTime.Now.AddDays(30)
-            };*/
+            };
 
             foreach (var item in date)
             {
                 if (obj.Email == item.Email && obj.Password == item.Password)
                 {
-                    //Response.Cookies.Append("MyCookie", "value1", cookieOptions);
-                    HttpContext.Session.SetString("username", item.Name);
-                    HttpContext.Session.SetString("Email", item.Email);
-                    //var U = cookieOptions.ToString();
-                    var U = HttpContext.Session.GetString("username");
+                    Response.Cookies.Append("UserName", item.Name);
+                    Response.Cookies.Append("Email", item.Email);
+                    Response.Cookies.Append("Admin", item.Admin.ToString());
+                
+
+                    //HttpContext.Session.SetString("username", item.Name);
+                    //HttpContext.Session.SetString("Email", item.Email);
+                    //HttpContext.Session.SetInt32("Admin", item.Admin);
+                    var U = Request.Cookies["UserName"].ToString();
+                    //var U = HttpContext.Session.GetString("username");
                     if (U.Length != 0)
-                        return RedirectToAction("NewIndex");
+                        return RedirectToAction("Index");
                 }
             }
 
@@ -99,11 +104,19 @@ namespace Cinema.Controllers
         {
             if (id != null)
             {
-                Ticket obj = await db.Ticket.FirstOrDefaultAsync(p => p.Id == id);
+                Session obj = await db.Session.FirstOrDefaultAsync(p => p.Id == id);
                 if (obj != null)
                     return View(obj);
             }
             return NotFound();
+        }
+        [HttpPost]
+        public async Task<IActionResult> BuyTicket(Ticket obj)
+        {
+            db.Entry(obj).State = EntityState.Added;
+            db.SaveChanges();
+
+            return RedirectToAction("Index");
         }
 
         //------------------------------------------------------------------------------
