@@ -55,7 +55,11 @@
                         <div class="form-group">
                             @Html.LabelFor(model => model.Password, "Password")
                             <br>
-                            @Html.EditorFor(model => model.Password)
+                            
+                            @Html.PasswordFor(model => model.Password)
+
+                           @** @Html.EditorFor(model => model.Password) 
+                               @Html.Password("Password", "", new { id = "password", Textmode = "Password" })**@
                         </div>
 
                         
