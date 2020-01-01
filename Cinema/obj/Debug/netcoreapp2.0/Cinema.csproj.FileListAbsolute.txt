@@ -9,3 +9,17 @@ D:\Програмы\Project C#\Cinema\Cinema\obj\Debug\netcoreapp2.0\Cinema.Asse
 D:\Програмы\Project C#\Cinema\Cinema\obj\Debug\netcoreapp2.0\Cinema.AssemblyInfo.cs
 D:\Програмы\Project C#\Cinema\Cinema\obj\Debug\netcoreapp2.0\Cinema.dll
 D:\Програмы\Project C#\Cinema\Cinema\obj\Debug\netcoreapp2.0\Cinema.pdb
+C:\Users\User\Documents\GitHub\Cinema\Cinema\bin\Debug\netcoreapp2.0\appsettings.Development.json
+C:\Users\User\Documents\GitHub\Cinema\Cinema\bin\Debug\netcoreapp2.0\appsettings.json
+C:\Users\User\Documents\GitHub\Cinema\Cinema\bin\Debug\netcoreapp2.0\bundleconfig.json
+C:\Users\User\Documents\GitHub\Cinema\Cinema\bin\Debug\netcoreapp2.0\Properties\launchSettings.json
+C:\Users\User\Documents\GitHub\Cinema\Cinema\bin\Debug\netcoreapp2.0\Cinema.deps.json
+C:\Users\User\Documents\GitHub\Cinema\Cinema\bin\Debug\netcoreapp2.0\Cinema.runtimeconfig.json
+C:\Users\User\Documents\GitHub\Cinema\Cinema\bin\Debug\netcoreapp2.0\Cinema.runtimeconfig.dev.json
+C:\Users\User\Documents\GitHub\Cinema\Cinema\bin\Debug\netcoreapp2.0\Cinema.dll
+C:\Users\User\Documents\GitHub\Cinema\Cinema\bin\Debug\netcoreapp2.0\Cinema.pdb
+C:\Users\User\Documents\GitHub\Cinema\Cinema\obj\Debug\netcoreapp2.0\Cinema.csprojAssemblyReference.cache
+C:\Users\User\Documents\GitHub\Cinema\Cinema\obj\Debug\netcoreapp2.0\Cinema.AssemblyInfoInputs.cache
+C:\Users\User\Documents\GitHub\Cinema\Cinema\obj\Debug\netcoreapp2.0\Cinema.AssemblyInfo.cs
+C:\Users\User\Documents\GitHub\Cinema\Cinema\obj\Debug\netcoreapp2.0\Cinema.dll
+C:\Users\User\Documents\GitHub\Cinema\Cinema\obj\Debug\netcoreapp2.0\Cinema.pdb
