@@ -55,13 +55,7 @@
                         <div class="form-group">
                             @Html.LabelFor(model => model.Password, "Password")
                             <br>
-                            @Html.EditorFor(model => model.Password)
-                        </div>
-
-                        <div class="form-group">
-                            @Html.LabelFor(model => model.BankCard, "BankCard")
-                            <br>
-                            @Html.EditorFor(model => model.BankCard)
+                            @Html.PasswordFor(model => model.Password)
                         </div>
 
                         <div class="form-group">
