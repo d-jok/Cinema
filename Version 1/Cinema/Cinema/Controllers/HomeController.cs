@@ -31,9 +31,9 @@ namespace Cinema.Controllers
         public async Task<IActionResult> Registration(User obj)
         {
             db.Entry(obj).State = EntityState.Added;
-            db.SaveChanges();
+            //db.SaveChanges();
 
-            return RedirectToAction("Index");
+            return RedirectToAction("Succeed");
         }
 
         public IActionResult Login()
@@ -63,7 +63,10 @@ namespace Cinema.Controllers
 
             return View();
         }
-
+        public IActionResult Succeed()
+        {
+            return View();
+        }
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
